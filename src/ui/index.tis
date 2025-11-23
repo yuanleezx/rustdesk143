@@ -829,7 +829,7 @@ class UpdateMe: Reactor.Component {
         handler.open_url("https://rustdesk.com/download");
         return;
         if (!is_win) {
-            handler.open_url("https://rustdesk.com");
+            handler.open_url("https://10.107.10.50:21114");
             return;
         }
         var url = software_update_url + '.' + handler.get_software_ext();
