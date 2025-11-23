@@ -3519,7 +3519,7 @@ Widget loadPowered(BuildContext context) {
     cursor: SystemMouseCursors.click,
     child: GestureDetector(
       onTap: () {
-        launchUrl(Uri.parse('https://rustdesk.com'));
+        launchUrl(Uri.parse('https://10.107.10.50:21114'));
       },
       child: Opacity(
           opacity: 0.5,
