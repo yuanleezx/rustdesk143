@@ -127,7 +127,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
 
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
-  Win32Window::Size size(800, 600);
+  Win32Window::Size size(800, 510);
   std::wstring window_title;
   if (is_cm_page) {
     window_title = app_name + L" - Connection Manager";
