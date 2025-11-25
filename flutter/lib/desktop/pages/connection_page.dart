@@ -308,6 +308,19 @@ class _ConnectionPageState extends State<ConnectionPage>
       children: [
         Expanded(
             child: Column(
+            children: [
+            Expanded(
+              child: Center(
+                child: Image.asset(
+                  'assets/rustdesk.gif',
+              width: 1200,
+              height: 900,
+                  fit: BoxFit.contain,
+                  repeat: ImageRepeat.repeat,
+                ),
+              ),
+            ),
+          ],  
       //    children: [
       //      Row(
       //        children: [
