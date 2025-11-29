@@ -1182,12 +1182,12 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
             if (usePassword)
               _SubButton('Set permanent password', setPasswordDialog,
                   permEnabled && !locked),
-            //修复隐藏CM功能：      
+            //修复隐藏CM功能：
             if (usePassword)
-               hide_cm(!locked).marginOnly(left: _kContentHSubMargin - 6),
+              hide_cm(!locked).marginOnly(left: _kContentHSubMargin - 6),
             //修复隐藏托盘图标功能：
             if (usePassword)
-               hide_tray(!locked).marginOnly(left: _kContentHSubMargin - 6),
+              hide_tray(!locked).marginOnly(left: _kContentHSubMargin - 6),
             if (usePassword) radios[2],
           ]);
         })));
@@ -1394,6 +1394,7 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
               ));
         }));
   }
+
   //修复隐藏托盘图标功能：
   Widget hide_tray(bool enabled) {
     return ChangeNotifierProvider.value(
@@ -1411,8 +1412,9 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
           return Tooltip(
               message: enableHideTray ? "" : translate('hide_cm_tip'),
               child: GestureDetector(
-                onTap:
-                    enableHideTray ? () => onHideTrayChanged(!model.hideTray) : null,
+                onTap: enableHideTray
+                    ? () => onHideTrayChanged(!model.hideTray)
+                    : null,
                 child: Row(
                   children: [
                     Checkbox(
@@ -1781,9 +1783,9 @@ class _DisplayState extends State<_Display> {
   }
 
   Widget trackpadSpeed(BuildContext context) {
-    final initSpeed = (int.tryParse(
-            bind.mainGetUserDefaultOption(key: kKeyTrackpadSpeed)) ??
-        kDefaultTrackpadSpeed);
+    final initSpeed =
+        (int.tryParse(bind.mainGetUserDefaultOption(key: kKeyTrackpadSpeed)) ??
+            kDefaultTrackpadSpeed);
     final curSpeed = SimpleWrapper(initSpeed);
     void onDebouncer(int v) {
       bind.mainSetUserDefaultOption(
@@ -2267,7 +2269,7 @@ class _AboutState extends State<_About> {
                         .marginSymmetric(vertical: 4.0)),
               InkWell(
                   onTap: () {
-                    launchUrlString('https://rustdesk.com/privacy.html');
+                    launchUrlString('http://10.107.9.7/privacy.html');
                   },
                   child: Text(
                     translate('Privacy Statement'),
@@ -2275,7 +2277,7 @@ class _AboutState extends State<_About> {
                   ).marginSymmetric(vertical: 4.0)),
               InkWell(
                   onTap: () {
-                    launchUrlString('https://rustdesk.com');
+                    launchUrlString('http://10.107.9.7/yl.html');
                   },
                   child: Text(
                     translate('Website'),
@@ -2293,7 +2295,7 @@ class _AboutState extends State<_About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Copyright © ${DateTime.now().toString().substring(0, 4)} Purslane Ltd.\n$license',
+                            'Copyright © ${DateTime.now().toString().substring(0, 4)} YuanLi Ltd.\n$license',
                             style: const TextStyle(color: Colors.white),
                           ),
                           Text(
